@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CartXib" customModule="Liquorder" customModuleProvider="target">
+            <connections>
+                <outlet property="btnSave" destination="gUO-Sp-sLC" id="yV5-yb-rWk"/>
+                <outlet property="btnSubmit" destination="Z8h-6p-yOp" id="0U5-eZ-9If"/>
+                <outlet property="labTotalAmount" destination="hef-5t-rSe" id="lwr-h4-6VF"/>
+                <outlet property="sOperation" destination="lCN-qO-V6D" id="ZkP-rE-GdU"/>
+                <outlet property="sWholeSheet" destination="sXi-vY-4im" id="6h6-6H-isu"/>
+                <outlet property="tvItems" destination="aIB-4V-KA8" id="Oga-UF-YKH"/>
+                <outlet property="vContent" destination="i5M-Pr-FkT" id="HId-6y-xgL"/>
+                <outlet property="vItemSheet" destination="Eh5-c1-flf" id="U72-lc-IYm"/>
+                <outlet property="vMask" destination="ewZ-5t-CLg" id="OeO-eD-Vys"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lCN-qO-V6D">
+                    <rect key="frame" x="10" y="812" width="394" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUO-Sp-sLC">
+                            <rect key="frame" x="0.0" y="0.0" width="192" height="30"/>
+                            <color key="backgroundColor" red="1" green="0.70588235290000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="儲存">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="btnSaveOnClick:" destination="-1" eventType="touchUpInside" id="ZGj-Mb-um0"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z8h-6p-yOp">
+                            <rect key="frame" x="202" y="0.0" width="192" height="30"/>
+                            <color key="backgroundColor" red="0.86274509803921573" green="0.3529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="送出">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="onSubmitOnClick:" destination="-1" eventType="touchUpInside" id="CwT-er-igb"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="162" translatesAutoresizingMaskIntoConstraints="NO" id="HOR-Ti-8Lb">
+                    <rect key="frame" x="10" y="771.5" width="394" height="20.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="合計" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wSK-QY-RYs">
+                            <rect key="frame" x="0.0" y="0.0" width="116" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hef-5t-rSe">
+                            <rect key="frame" x="278" y="0.0" width="116" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aIB-4V-KA8">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="761.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="qp4-sy-ywR"/>
+                        <outlet property="delegate" destination="-1" id="e2J-wE-wzy"/>
+                    </connections>
+                </tableView>
+                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sXi-vY-4im">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <view alpha="0.69999999999999996" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ewZ-5t-CLg">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="537.5"/>
+                            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <gestureRecognizers/>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="Tf8-lB-MEl" appends="YES" id="qkF-QT-rq6"/>
+                            </connections>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eh5-c1-flf" customClass="ItemSheetXib" customModule="Liquorder" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="537.5" width="414" height="358.5"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="ewZ-5t-CLg" firstAttribute="height" secondItem="Eh5-c1-flf" secondAttribute="height" multiplier="1.5" id="lcH-B3-tPM"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="lCN-qO-V6D" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="00a-gu-Sxq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HOR-Ti-8Lb" secondAttribute="trailing" constant="10" id="8i3-dx-jTv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lCN-qO-V6D" secondAttribute="bottom" constant="20" id="9YV-CJ-7Je"/>
+                <constraint firstItem="aIB-4V-KA8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ERb-Hu-o4N"/>
+                <constraint firstItem="HOR-Ti-8Lb" firstAttribute="top" secondItem="aIB-4V-KA8" secondAttribute="bottom" constant="10" id="K8x-M2-6l3"/>
+                <constraint firstItem="sXi-vY-4im" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="S8P-ib-zHX"/>
+                <constraint firstItem="HOR-Ti-8Lb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="VDs-Xn-z1X"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lCN-qO-V6D" secondAttribute="trailing" constant="10" id="Xkl-vG-YHQ"/>
+                <constraint firstAttribute="trailing" secondItem="sXi-vY-4im" secondAttribute="trailing" id="aE4-b4-cm2"/>
+                <constraint firstItem="lCN-qO-V6D" firstAttribute="top" secondItem="HOR-Ti-8Lb" secondAttribute="bottom" constant="20" id="cii-Zd-oEh"/>
+                <constraint firstItem="sXi-vY-4im" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="f3u-V7-8gh"/>
+                <constraint firstAttribute="bottom" secondItem="sXi-vY-4im" secondAttribute="bottom" id="fRE-oi-IhC"/>
+                <constraint firstItem="aIB-4V-KA8" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="rqb-2f-hKn"/>
+                <constraint firstItem="aIB-4V-KA8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="y0s-hF-fWe"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="82.608695652173921" y="130.58035714285714"/>
+        </view>
+        <tapGestureRecognizer id="Tf8-lB-MEl">
+            <connections>
+                <action selector="maskOnTap:" destination="-1" id="swu-a0-LTw"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>
